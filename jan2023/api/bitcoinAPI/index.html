@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Bitcoin API Demo</title>
+</head>
+<body>
+
+    <!-- why not use a form? -->
+    <!-- we don't want the page to refresh so why us a form -->
+
+    <!-- nesting input into label, explicit labeling: for attribute used to match id value of input -->
+    <!--This website explains the difference between having the label and input separate vs having the input nested inside of the label https://css-tricks.com/html-inputs-and-labels-a-love-story/#:~:text=There%20are%20two%20ways%20to,input%20and%20holding%20its%20hand -->
+    <label for="USD">
+        <!-- using same name to group radio buttons, allows user to click individual buttons and not all buttons stay clicked -->
+        <!-- added checked attribute to set button to be clicked by default -->
+        <input type="radio" name="country" id="USD" value="USD" checked>USD
+    </label>
+
+    <label for="GBP">
+        <input type="radio" name="country" id="GBP" value="GBP">GBP
+    </label>
+
+    <label for="EUR">
+        <input type="radio" name="country" id="EUR" value="EUR">EUR
+    </label>
+    
+    <div id="btnParent">
+        <input type="submit" value="Get Price" id='btn'>
+    </div>
+    
+    <h2>This is the current price: <span id='displayPrice'></span></h2>
+
+    <p><a href="https://www.coindesk.com/price/bitcoin">Powered by CoinDesk</a></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Consider this, how would you incorporate a label with your input? Here is a hint: https://css-tricks.com/html-inputs-and-labels-a-love-story/#:~:text=There%20are%20two%20ways%20to,input%20and%20holding%20its%20hand -->
